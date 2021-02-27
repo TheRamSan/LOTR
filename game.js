@@ -1,4 +1,4 @@
-var buttonColours = ["galadriel", "gandalf", "gollum", "smeagol"];
+var buttonColours = ["galadriel", "gandalf", "legolas", "smeagol"];
 var gamePattern = [];
 var userClickedPattern = [];
 var level = [0];
