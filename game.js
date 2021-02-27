@@ -30,7 +30,7 @@ $(".btn").click(function(event) {
 });
 
 function playSound(name) {
-  var audio = new Audio("sounds/" + name + ".mp3");
+  var audio = new Audio(name + ".mp3");
   audio.play();
     };
 
@@ -50,7 +50,7 @@ function checkAnswer(currentLevel) {
 
     }
   } else {
-    var audio = new Audio("sounds/harry.mp3");
+    var audio = new Audio("harry.mp3");
     audio.play();
     $("body").addClass("game-over");
     setTimeout(function() {
