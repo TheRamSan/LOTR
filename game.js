@@ -13,7 +13,8 @@ function nextSequence() {
   var randomChosenColour = buttonColours[randomNumber];
   gamePattern.push(randomChosenColour);
   $("#" + (gamePattern[gamePattern["length"] - 1])).fadeOut(100).fadeIn(100);
-   $("h1").text("Level " + (level.length));
+  playSound(randomChosenColour);
+  $("h1").text("Level " + (level.length));
   level.push(level.length);
   return randomChosenColour;
 };
@@ -21,7 +22,7 @@ function nextSequence() {
 $(".btn").click(function(event) {
   var userChosenColour = (event.target.id);
   userClickedPattern.push(userChosenColour);
-  playSound(userChosenColour);
+  // playSound(userChosenColour);
   animatePress(userChosenColour);
   console.log(userClickedPattern);
   checkAnswer(userClickedPattern.length - 1);
@@ -43,10 +44,10 @@ function animatePress(currentColour) {
 function checkAnswer(currentLevel) {
   if (gamePattern[currentLevel] === userClickedPattern[currentLevel]) {
     if (userClickedPattern.length === gamePattern.length) {
- playSound(randomChosenColour);
+
       setTimeout(nextSequence, 1000);
       userClickedPattern = [];
-
+playSound(userChosenColour);
     }
   } else {
     var audio = new Audio("harry.mp3");
