@@ -13,8 +13,7 @@ function nextSequence() {
   var randomChosenColour = buttonColours[randomNumber];
   gamePattern.push(randomChosenColour);
   $("#" + (gamePattern[gamePattern["length"] - 1])).fadeOut(100).fadeIn(100);
-  playSound(randomChosenColour);
-  $("h1").text("Level " + (level.length));
+   $("h1").text("Level " + (level.length));
   level.push(level.length);
   return randomChosenColour;
 };
@@ -44,7 +43,7 @@ function animatePress(currentColour) {
 function checkAnswer(currentLevel) {
   if (gamePattern[currentLevel] === userClickedPattern[currentLevel]) {
     if (userClickedPattern.length === gamePattern.length) {
-
+ playSound(randomChosenColour);
       setTimeout(nextSequence, 1000);
       userClickedPattern = [];
 
