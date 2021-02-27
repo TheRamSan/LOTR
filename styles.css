@@ -32,23 +32,23 @@ body {
 }
 
 .red {
-  background-image: url("img/smeagol.jpg");
+  background-image: url("smeagol.jpg");
   padding: 5px;
 
 }
 
 .green {
-  background-image: url("img/Gandalf.jpg");
+  background-image: url("Gandalf.jpg");
   padding: 5px;
 }
 
 .blue {
-  background-image: url("img/galadriel.png");
+  background-image: url("galadriel.png");
   padding: 5px;
 }
 
 .yellow {
-background-image: url("img/gollum.jpg");
+background-image: url("gollum.jpg");
 
 
 
